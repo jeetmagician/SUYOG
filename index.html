@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SuYOG Construction | Building New Opportunities</title>
+<meta name="description" content="SuYOG Construction: construction, development and infrastructure. Building new opportunities with quality, transparency and on-time delivery.">
+<meta property="og:title" content="SuYOG Construction | Building New Opportunities">
+<meta property="og:image" content="images/logo-full.jpg">
+<link rel="icon" href="images/logo-round.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0b2063; --navy-d:#071546; --navy-dd:#040d2e;
+  --gold:#e9a319; --gold-l:#f7c948; --gold-d:#b87a07;
+  --cream:#faf7f0; --white:#fff; --ink:#111a3a; --mute:#59627e; --line:#e6e1d3;
+  --gold-grad:linear-gradient(135deg,#f7c948,#e9a319 55%,#c98a0b);
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,92%);margin:0 auto}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.12;letter-spacing:-.01em}
+h2{font-size:clamp(2rem,4vw,3rem);color:var(--navy)}
+h3{font-size:1.35rem;color:var(--navy)}
+section{padding:104px 0}
+.eyebrow{font:600 .75rem var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--gold-d);margin-bottom:1rem;display:flex;align-items:center;gap:.8rem}
+.eyebrow::before{content:"";width:34px;height:2px;background:var(--gold-grad)}
+.head{max-width:640px;margin-bottom:3.2rem}
+.head p{color:var(--mute);margin-top:1rem}
+.btn{display:inline-block;padding:1rem 1.9rem;font:600 .9rem var(--sans);letter-spacing:.04em;border:0;background:var(--gold-grad);color:var(--navy-dd);cursor:pointer;transition:.25s;box-shadow:0 10px 24px -10px rgba(233,163,25,.7)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 30px -10px rgba(233,163,25,.85)}
+.btn.ghost{background:transparent;color:var(--white);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.45)}
+.btn.ghost:hover{box-shadow:inset 0 0 0 1.5px var(--gold-l);color:var(--gold-l)}
+
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:50;transition:.3s}
+header.solid{background:rgba(4,13,46,.96);backdrop-filter:blur(10px);box-shadow:0 8px 30px -14px rgba(0,0,0,.6)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{display:flex;align-items:center;gap:.85rem;color:var(--white)}
+.brand img{width:50px;height:50px;border-radius:50%;box-shadow:0 0 0 2px var(--gold)}
+.brand b{font:700 1.3rem var(--serif);letter-spacing:.04em;display:block;line-height:1.1}
+.brand b span{color:var(--gold-l)}
+.brand small{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:#b6c0e6}
+nav ul{display:flex;gap:2.1rem;list-style:none}
+nav a{color:#d6dcf5;font-size:.88rem;font-weight:500;letter-spacing:.03em;position:relative;padding:.3rem 0}
+nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--gold);transition:.3s}
+nav a:hover{color:var(--white)}
+nav a:hover::after{width:100%}
+.nav .btn{padding:.7rem 1.4rem;font-size:.8rem}
+.burger{display:none;background:none;border:0;color:var(--white);font-size:1.8rem;cursor:pointer}
+
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;color:var(--white);overflow:hidden;
+  background:radial-gradient(900px 600px at 85% 30%,rgba(233,163,25,.18),transparent 60%),linear-gradient(150deg,var(--navy-d),var(--navy-dd) 70%)}
+.hero::before{content:"";position:absolute;inset:0;opacity:.06;
+  background-image:linear-gradient(var(--white) 1px,transparent 1px),linear-gradient(90deg,var(--white) 1px,transparent 1px);background-size:64px 64px}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center;padding:140px 0 90px}
+.hero h1{font-size:clamp(2.8rem,6vw,5rem);font-weight:700;color:var(--white)}
+.hero h1 em{font-style:italic;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:520px;margin:1.5rem 0 2.3rem;color:#c3cbea;font-size:1.08rem}
+.cta{display:flex;gap:1rem;flex-wrap:wrap}
+.pillars{display:flex;gap:.7rem 1.4rem;flex-wrap:wrap;margin-top:2.6rem;font-size:.78rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-l)}
+.pillars span+span::before{content:"•";margin-right:1.4rem;color:var(--gold-d)}
+.logo-card{background:var(--white);border-radius:28px;padding:18px;box-shadow:0 40px 80px -30px rgba(0,0,0,.7),0 0 0 1px rgba(247,201,72,.5);transform:rotate(1.5deg);max-width:440px;margin-left:auto}
+.logo-card img{border-radius:16px;width:100%}
+
+/* trust strip */
+.strip{background:var(--white);border-bottom:1px solid var(--line)}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.pill{padding:2rem 1.4rem;display:flex;gap:1rem;align-items:flex-start;border-right:1px solid var(--line)}
+.pill:last-child{border:0}
+.pill svg{flex:none;width:34px;height:34px;stroke:var(--gold-d);fill:none;stroke-width:1.6}
+.pill b{display:block;font-family:var(--serif);color:var(--navy);font-size:1.08rem}
+.pill span{font-size:.85rem;color:var(--mute)}
+
+/* about */
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.about p{color:var(--mute);margin-top:1.2rem}
+.checks{list-style:none;margin-top:1.8rem;display:grid;gap:.8rem}
+.checks li{padding-left:2rem;position:relative;font-weight:500}
+.checks li::before{content:"";position:absolute;left:0;top:.35em;width:16px;height:16px;border-radius:50%;background:var(--gold-grad)}
+.checks li::after{content:"";position:absolute;left:5px;top:.62em;width:6px;height:3px;border-left:2px solid var(--navy-dd);border-bottom:2px solid var(--navy-dd);transform:rotate(-45deg)}
+.about-art{position:relative;background:linear-gradient(150deg,var(--navy),var(--navy-dd));aspect-ratio:1/1;border-radius:6px;overflow:hidden;display:grid;place-items:center;box-shadow:0 30px 60px -30px rgba(11,32,99,.7)}
+.about-art::before{content:"";position:absolute;inset:14px;border:1px solid rgba(247,201,72,.5)}
+.about-art img{width:62%;border-radius:50%;box-shadow:0 0 0 4px var(--gold)}
+
+/* services */
+.services{background:var(--white)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+.card{padding:2.3rem 2rem;background:var(--cream);border:1px solid var(--line);position:relative;transition:.3s}
+.card::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--gold-grad);transition:.4s}
+.card:hover{transform:translateY(-6px);background:var(--white);box-shadow:0 26px 50px -28px rgba(11,32,99,.45)}
+.card:hover::after{width:100%}
+.card svg{width:46px;height:46px;stroke:var(--navy);fill:none;stroke-width:1.5;margin-bottom:1.3rem}
+.card p{color:var(--mute);font-size:.95rem;margin-top:.7rem}
+
+/* projects */
+.projects{background:linear-gradient(160deg,var(--navy-d),var(--navy-dd));color:var(--white)}
+.projects h2,.projects h3{color:var(--white)}
+.projects .eyebrow{color:var(--gold-l)}
+.filters{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:2.2rem}
+.filters button{background:none;border:1px solid rgba(255,255,255,.28);color:#d6dcf5;padding:.55rem 1.3rem;font:500 .82rem var(--sans);letter-spacing:.05em;cursor:pointer;transition:.2s}
+.filters button.on,.filters button:hover{background:var(--gold-grad);border-color:transparent;color:var(--navy-dd)}
+.proj{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--navy)}
+.proj svg{width:100%;height:100%;transition:transform .6s}
+.proj:hover svg{transform:scale(1.07)}
+.proj figcaption{position:absolute;inset:auto 0 0 0;padding:1.5rem;background:linear-gradient(transparent,rgba(4,13,46,.95))}
+.proj small{color:var(--gold-l);font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:.68rem}
+.proj h3{font-size:1.2rem;margin-top:.2rem}
+.note{margin-top:1.6rem;font-size:.8rem;color:#8d98c4}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.8rem;counter-reset:s}
+.step{counter-increment:s;padding-top:1.5rem;border-top:2px solid var(--navy)}
+.step::before{content:"0" counter(s);font:700 2.8rem var(--serif);background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent;display:block;line-height:1;margin-bottom:.7rem}
+.step p{color:var(--mute);font-size:.93rem;margin-top:.5rem}
+
+/* leadership */
+.leaders{background:var(--white)}
+.l-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem}
+.leader{display:grid;grid-template-columns:200px 1fr;gap:1.6rem;align-items:center;padding:1.5rem;background:var(--cream);border:1px solid var(--line);transition:.3s}
+.leader:hover{box-shadow:0 26px 50px -28px rgba(11,32,99,.45);transform:translateY(-4px)}
+.leader .ph{aspect-ratio:3/4;overflow:hidden;position:relative}
+.leader .ph::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(11,32,99,.15)}
+.leader img{width:100%;height:100%;object-fit:cover}
+.leader .role{font:600 .72rem var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold-d)}
+.leader h3{font-size:1.55rem;margin:.35rem 0 .7rem}
+.leader p{color:var(--mute);font-size:.92rem}
+
+/* contact */
+.contact{background:linear-gradient(160deg,var(--navy-d),var(--navy-dd));color:var(--white)}
+.contact h2{color:var(--white)}
+.contact .eyebrow{color:var(--gold-l)}
+.contact .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:4.5rem}
+.contact ul{list-style:none;margin-top:2.2rem;display:grid;gap:1.3rem}
+.contact li small{display:block;color:var(--gold-l);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+.contact li{color:#d6dcf5}
+form{display:grid;gap:1.1rem;background:rgba(255,255,255,.05);border:1px solid rgba(247,201,72,.3);padding:2.2rem}
+form .row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+label{font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#aab5e0;display:grid;gap:.45rem}
+input,select,textarea{width:100%;padding:.85rem .95rem;background:rgba(4,13,46,.7);border:1px solid #2a3a7a;color:var(--white);font:400 .95rem var(--sans);border-radius:0}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:-1px}
+textarea{min-height:110px;resize:vertical}
+.fine{font-size:.76rem;color:#8d98c4}
+
+footer.site{background:var(--navy-dd);color:#8d98c4;padding:2.4rem 0;font-size:.85rem;border-top:1px solid rgba(247,201,72,.25)}
+footer.site .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+footer.site .brand img{width:40px;height:40px}
+footer.site .brand b{font-size:1.05rem}
+
+.wa{position:fixed;right:18px;bottom:18px;z-index:40;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 26px rgba(0,0,0,.4);transition:.2s}
+.wa:hover{transform:scale(1.08)}
+.wa svg{width:30px;height:30px;fill:#fff}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+@media (max-width:980px){
+  section{padding:70px 0}
+  .burger{display:block}
+  nav{position:absolute;inset:76px 0 auto 0;background:var(--navy-dd);display:none;padding:1.2rem 4%}
+  nav.open{display:block}
+  nav ul{flex-direction:column;gap:1.1rem}
+  .nav>.btn{display:none}
+  .hero .wrap,.about .wrap,.contact .wrap{grid-template-columns:1fr;gap:2.8rem}
+  .logo-card{margin:0 auto;max-width:340px}
+  .grid3,.steps{grid-template-columns:1fr 1fr}
+  .strip .wrap{grid-template-columns:1fr 1fr}
+  .pill:nth-child(2){border-right:0}
+  .pill:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .l-grid{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .grid3,.steps,form .row,.strip .wrap{grid-template-columns:1fr}
+  .pill{border-right:0;border-bottom:1px solid var(--line)}
+  .leader{grid-template-columns:1fr}
+  .leader .ph{max-width:220px}
+  .brand small{display:none}
+}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#top" class="brand"><img src="images/logo-round.jpg" alt="SuYOG logo"><div><b>Su<span>YOG</span></b><small>Construction</small></div></a>
+    <nav id="nav">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#leadership">Leadership</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="#contact" class="btn">Get a Quote</a>
+    <button class="burger" id="burger" aria-label="Menu">&#9776;</button>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow" style="color:var(--gold-l)">SuYOG Construction</div>
+      <h1>Building new <em>opportunities.</em></h1>
+      <p>Construction, development and infrastructure delivered with quality materials, transparent pricing and a firm completion date.</p>
+      <div class="cta">
+        <a href="#contact" class="btn">Request a Free Estimate</a>
+        <a href="#projects" class="btn ghost">View Our Work</a>
+      </div>
+      <div class="pillars"><span>Construction</span><span>Development</span><span>Infrastructure</span></div>
+    </div>
+    <div class="logo-card"><img src="images/logo-full.jpg" alt="SuYOG Construction: Building New Opportunities"></div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <div class="pill"><svg viewBox="0 0 48 48"><path d="M24 5l16 7v11c0 10-7 17-16 20C15 40 8 33 8 23V12z"/><path d="M17 24l5 5 9-10"/></svg><div><b>Quality materials</b><span>Tested, branded, traceable</span></div></div>
+    <div class="pill"><svg viewBox="0 0 48 48"><rect x="8" y="6" width="32" height="36" rx="2"/><path d="M15 16h18M15 24h18M15 32h10"/></svg><div><b>Transparent pricing</b><span>Itemised, fixed quotations</span></div></div>
+    <div class="pill"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><path d="M24 13v11l7 5"/></svg><div><b>On-time delivery</b><span>Written project timeline</span></div></div>
+    <div class="pill"><svg viewBox="0 0 48 48"><circle cx="24" cy="16" r="7"/><path d="M9 42c0-9 7-15 15-15s15 6 15 15"/></svg><div><b>Expert supervision</b><span>Engineers on site, every day</span></div></div>
+  </div>
+</div>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">About us</div>
+      <h2>Built on trust, finished on time</h2>
+      <p>SuYOG Construction is a full-service construction, development and infrastructure company. From the first site visit to the final handover, you deal directly with the people doing the work, with no hidden costs and no surprises.</p>
+      <ul class="checks">
+        <li>Fixed, itemised quotations before work starts</li>
+        <li>Quality materials, checked at every stage</li>
+        <li>Engineers supervising on site</li>
+        <li>Written timeline and stage-wise payments</li>
+      </ul>
+    </div>
+    <div class="about-art reveal"><img src="images/logo-round.jpg" alt="SuYOG emblem"></div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="head reveal"><div class="eyebrow">What we do</div><h2>Our services</h2><p>One company for your whole project, from the plan to the keys.</p></div>
+    <div class="grid3">
+      <div class="card reveal"><svg viewBox="0 0 48 48"><path d="M6 42V22L24 8l18 14v20zM19 42V30h10v12"/></svg><h3>Residential</h3><p>Independent houses, villas and apartment buildings designed around how your family lives.</p></div>
+      <div class="card reveal"><svg viewBox="0 0 48 48"><path d="M10 42V6h20v36M30 18h8v24M16 14h8M16 22h8M16 30h8M4 42h40"/></svg><h3>Commercial</h3><p>Offices, showrooms, shops and warehouses built to your budget and your opening date.</p></div>
+      <div class="card reveal"><svg viewBox="0 0 48 48"><path d="M4 34h40M8 34V22h32v12M14 22v-8h20v8M24 14V6"/></svg><h3>Infrastructure</h3><p>Roads, drainage, retaining walls, boundary works and site development.</p></div>
+      <div class="card reveal"><svg viewBox="0 0 48 48"><path d="M6 40h36M10 40V18l14-10 14 10v22M18 40V28h12v12"/></svg><h3>Development</h3><p>Plotted and township development, from land planning to finished project.</p></div>
+      <div class="card reveal"><svg viewBox="0 0 48 48"><path d="M8 40l8-8 6 6 14-14M30 24h6v6M6 8h36v32H6z"/></svg><h3>Renovation</h3><p>Extensions, structural repair, waterproofing and complete remodelling.</p></div>
+      <div class="card reveal"><svg viewBox="0 0 48 48"><path d="M24 6l16 8v10c0 10-7 16-16 18C15 40 8 34 8 24V14z"/><path d="M17 24l5 5 9-10"/></svg><h3>Turnkey</h3><p>Design, approvals, construction and finishing under one contract and one point of contact.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <div class="wrap">
+    <div class="head reveal"><div class="eyebrow">Portfolio</div><h2>Featured projects</h2></div>
+    <div class="filters reveal" id="filters">
+      <button class="on" data-f="all">All</button><button data-f="res">Residential</button><button data-f="com">Commercial</button><button data-f="inf">Infrastructure</button>
+    </div>
+    <div class="grid3" id="pgrid">
+      <figure class="proj reveal" data-c="res"><svg viewBox="0 0 400 300"><rect width="400" height="300" fill="#0b2063"/><path d="M80 300V150l120-80 120 80v150z" fill="none" stroke="#e9a319" stroke-width="2"/><path d="M170 300v-80h60v80M110 170h40v40h-40zM250 170h40v40h-40z" fill="none" stroke="#fff" stroke-opacity=".3"/></svg><figcaption><small>Residential</small><h3>Project name</h3></figcaption></figure>
+      <figure class="proj reveal" data-c="com"><svg viewBox="0 0 400 300"><rect width="400" height="300" fill="#0b2063"/><path d="M110 300V50h180v250" fill="none" stroke="#e9a319" stroke-width="2"/><path d="M110 90h180M110 130h180M110 170h180M110 210h180M110 250h180M200 50v250" stroke="#fff" stroke-opacity=".22"/></svg><figcaption><small>Commercial</small><h3>Project name</h3></figcaption></figure>
+      <figure class="proj reveal" data-c="inf"><svg viewBox="0 0 400 300"><rect width="400" height="300" fill="#0b2063"/><path d="M0 220q100-90 200-30t200-60M0 250q100-90 200-30t200-60" fill="none" stroke="#e9a319" stroke-width="2"/><path d="M60 215v-70M200 190v-90M340 160v-80" stroke="#fff" stroke-opacity=".3" stroke-width="6"/></svg><figcaption><small>Infrastructure</small><h3>Project name</h3></figcaption></figure>
+      <figure class="proj reveal" data-c="res"><svg viewBox="0 0 400 300"><rect width="400" height="300" fill="#0b2063"/><path d="M60 300V110h120v190M180 300V160h100v140M280 300V130h70v170" fill="none" stroke="#e9a319" stroke-width="2"/><path d="M60 150h120M60 190h120M60 230h120" stroke="#fff" stroke-opacity=".22"/></svg><figcaption><small>Residential</small><h3>Project name</h3></figcaption></figure>
+      <figure class="proj reveal" data-c="com"><svg viewBox="0 0 400 300"><rect width="400" height="300" fill="#0b2063"/><path d="M40 300V160h320v140M40 160l40-40h240l40 40" fill="none" stroke="#e9a319" stroke-width="2"/><path d="M80 300v-70h50v70M170 300v-70h50v70M260 300v-70h50v70" stroke="#fff" stroke-opacity=".3" fill="none"/></svg><figcaption><small>Commercial</small><h3>Project name</h3></figcaption></figure>
+      <figure class="proj reveal" data-c="inf"><svg viewBox="0 0 400 300"><rect width="400" height="300" fill="#0b2063"/><path d="M0 260h400M0 200l400-60M0 300l400-100" fill="none" stroke="#e9a319" stroke-width="2"/><path d="M200 170v-80M160 90h80" stroke="#fff" stroke-opacity=".3" stroke-width="5"/></svg><figcaption><small>Infrastructure</small><h3>Project name</h3></figcaption></figure>
+    </div>
+    <p class="note">Placeholder tiles. Each will be replaced with a real project photo, name and location.</p>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="head reveal"><div class="eyebrow">How we work</div><h2>From enquiry to handover</h2></div>
+    <div class="steps">
+      <div class="step reveal"><h3>Consult</h3><p>Site visit, requirements and budget discussion. Free and without obligation.</p></div>
+      <div class="step reveal"><h3>Plan &amp; Quote</h3><p>Drawings, material specification and a fixed, itemised quotation.</p></div>
+      <div class="step reveal"><h3>Build</h3><p>Stage-wise construction with daily supervision and regular progress updates.</p></div>
+      <div class="step reveal"><h3>Handover</h3><p>Final inspection, snag fixing and complete documents handed over.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="leaders" id="leadership">
+  <div class="wrap">
+    <div class="head reveal"><div class="eyebrow">Leadership</div><h2>The people behind SuYOG</h2></div>
+    <div class="l-grid">
+      <article class="leader reveal">
+        <div class="ph"><img src="images/chairman-suranjeet.jpg" alt="Er. Suranjeet Choudhury" style="object-position:48% 30%"></div>
+        <div><div class="role">Chairman</div><h3>Er. Suranjeet Choudhury</h3><p>Sets the direction and standards of the company, with an engineer's focus on sound building and honest dealing.</p></div>
+      </article>
+      <article class="leader reveal">
+        <div class="ph"><img src="images/ceo-subham.jpg" alt="Subham Bal" style="object-position:50% 18%"></div>
+        <div><div class="role">Chief Executive Officer</div><h3>Subham Bal</h3><p>Leads day-to-day operations, ensuring every project is delivered to specification, on budget and on time.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Contact</div>
+      <h2>Let's plan your project</h2>
+      <ul>
+        <li><small>Phone</small>+91 00000 00000</li>
+        <li><small>Email</small>info@yourdomain.com</li>
+        <li><small>Office</small>Your address, City, State, PIN</li>
+        <li><small>Hours</small>Mon – Sat, 9:00 am – 6:00 pm</li>
+      </ul>
+    </div>
+    <form id="form" class="reveal">
+      <div class="row">
+        <label>Name<input name="name" required></label>
+        <label>Phone<input name="phone" type="tel" required></label>
+      </div>
+      <label>Project type
+        <select name="type"><option>Residential</option><option>Commercial</option><option>Infrastructure</option><option>Development</option><option>Renovation</option><option>Other</option></select>
+      </label>
+      <label>Details<textarea name="msg" placeholder="Location, size, budget, timeline"></textarea></label>
+      <button class="btn" type="submit">Send on WhatsApp</button>
+      <p class="fine">Opens WhatsApp with your message ready to send. Nothing is stored on this website.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="site"><div class="wrap">
+  <a href="#top" class="brand"><img src="images/logo-round.jpg" alt=""><div><b>Su<span>YOG</span></b></div></a>
+  <span>&copy; <span id="yr"></span> SuYOG Construction. Building New Opportunities.</span>
+</div></footer>
+
+<a class="wa" id="wa" href="#" aria-label="Chat on WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4z"/></svg></a>
+
+<script>
+(function(){
+  // EDIT: WhatsApp number, international format, digits only (91 = India).
+  var WA_NUMBER = "910000000000";
+
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  document.getElementById('wa').href = 'https://wa.me/' + WA_NUMBER;
+
+  var hdr = document.getElementById('hdr');
+  function onScroll(){ hdr.classList.toggle('solid', window.scrollY > 40); }
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  var nav = document.getElementById('nav');
+  document.getElementById('burger').onclick = function(){ nav.classList.toggle('open'); hdr.classList.add('solid'); };
+  nav.addEventListener('click', function(e){ if(e.target.tagName==='A') nav.classList.remove('open'); });
+
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  document.getElementById('filters').addEventListener('click', function(e){
+    var b = e.target.closest('button'); if(!b) return;
+    this.querySelectorAll('button').forEach(function(x){ x.classList.toggle('on', x===b); });
+    document.querySelectorAll('#pgrid .proj').forEach(function(p){
+      p.style.display = (b.dataset.f==='all' || p.dataset.c===b.dataset.f) ? '' : 'none';
+    });
+  });
+
+  document.getElementById('form').addEventListener('submit', function(e){
+    e.preventDefault();
+    var f = this.elements;
+    var text = 'Hello SuYOG Construction, I am ' + f.name.value + ' (' + f.phone.value + ').\nProject: ' + f.type.value + '\n' + f.msg.value;
+    window.open('https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(text), '_blank');
+  });
+})();
+</script>
+</body>
+</html>
