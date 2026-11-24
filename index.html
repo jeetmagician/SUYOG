@@ -105,12 +105,9 @@ nav a:hover::after{width:100%}
 .projects{background:linear-gradient(160deg,var(--navy-d),var(--navy-dd));color:var(--white)}
 .projects h2,.projects h3{color:var(--white)}
 .projects .eyebrow{color:var(--gold-l)}
-.filters{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:2.2rem}
-.filters button{background:none;border:1px solid rgba(255,255,255,.28);color:#d6dcf5;padding:.55rem 1.3rem;font:500 .82rem var(--sans);letter-spacing:.05em;cursor:pointer;transition:.2s}
-.filters button.on,.filters button:hover{background:var(--gold-grad);border-color:transparent;color:var(--navy-dd)}
 .proj{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--navy)}
-.proj svg{width:100%;height:100%;transition:transform .6s}
-.proj:hover svg{transform:scale(1.07)}
+.proj img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.proj:hover img{transform:scale(1.07)}
 .proj figcaption{position:absolute;inset:auto 0 0 0;padding:1.5rem;background:linear-gradient(transparent,rgba(4,13,46,.95))}
 .proj small{color:var(--gold-l);font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:.68rem}
 .proj h3{font-size:1.2rem;margin-top:.2rem}
@@ -267,18 +264,11 @@ footer.site .brand b{font-size:1.05rem}
 <section class="projects" id="projects">
   <div class="wrap">
     <div class="head reveal"><div class="eyebrow">Portfolio</div><h2>Featured projects</h2></div>
-    <div class="filters reveal" id="filters">
-      <button class="on" data-f="all">All</button><button data-f="res">Residential</button><button data-f="com">Commercial</button><button data-f="inf">Infrastructure</button>
-    </div>
     <div class="grid3" id="pgrid">
-      <figure class="proj reveal" data-c="res"><svg viewBox="0 0 400 300"><rect width="400" height="300" fill="#0b2063"/><path d="M80 300V150l120-80 120 80v150z" fill="none" stroke="#e9a319" stroke-width="2"/><path d="M170 300v-80h60v80M110 170h40v40h-40zM250 170h40v40h-40z" fill="none" stroke="#fff" stroke-opacity=".3"/></svg><figcaption><small>Residential</small><h3>Project name</h3></figcaption></figure>
-      <figure class="proj reveal" data-c="com"><svg viewBox="0 0 400 300"><rect width="400" height="300" fill="#0b2063"/><path d="M110 300V50h180v250" fill="none" stroke="#e9a319" stroke-width="2"/><path d="M110 90h180M110 130h180M110 170h180M110 210h180M110 250h180M200 50v250" stroke="#fff" stroke-opacity=".22"/></svg><figcaption><small>Commercial</small><h3>Project name</h3></figcaption></figure>
-      <figure class="proj reveal" data-c="inf"><svg viewBox="0 0 400 300"><rect width="400" height="300" fill="#0b2063"/><path d="M0 220q100-90 200-30t200-60M0 250q100-90 200-30t200-60" fill="none" stroke="#e9a319" stroke-width="2"/><path d="M60 215v-70M200 190v-90M340 160v-80" stroke="#fff" stroke-opacity=".3" stroke-width="6"/></svg><figcaption><small>Infrastructure</small><h3>Project name</h3></figcaption></figure>
-      <figure class="proj reveal" data-c="res"><svg viewBox="0 0 400 300"><rect width="400" height="300" fill="#0b2063"/><path d="M60 300V110h120v190M180 300V160h100v140M280 300V130h70v170" fill="none" stroke="#e9a319" stroke-width="2"/><path d="M60 150h120M60 190h120M60 230h120" stroke="#fff" stroke-opacity=".22"/></svg><figcaption><small>Residential</small><h3>Project name</h3></figcaption></figure>
-      <figure class="proj reveal" data-c="com"><svg viewBox="0 0 400 300"><rect width="400" height="300" fill="#0b2063"/><path d="M40 300V160h320v140M40 160l40-40h240l40 40" fill="none" stroke="#e9a319" stroke-width="2"/><path d="M80 300v-70h50v70M170 300v-70h50v70M260 300v-70h50v70" stroke="#fff" stroke-opacity=".3" fill="none"/></svg><figcaption><small>Commercial</small><h3>Project name</h3></figcaption></figure>
-      <figure class="proj reveal" data-c="inf"><svg viewBox="0 0 400 300"><rect width="400" height="300" fill="#0b2063"/><path d="M0 260h400M0 200l400-60M0 300l400-100" fill="none" stroke="#e9a319" stroke-width="2"/><path d="M200 170v-80M160 90h80" stroke="#fff" stroke-opacity=".3" stroke-width="5"/></svg><figcaption><small>Infrastructure</small><h3>Project name</h3></figcaption></figure>
+      <figure class="proj reveal"><img src="images/work-slab-reinforcement.jpg" alt="Workers laying steel reinforcement for a roof slab" loading="lazy"><figcaption><small>On site</small><h3>Slab reinforcement</h3></figcaption></figure>
+      <figure class="proj reveal"><img src="images/work-rcc-frame.jpg" alt="Multi-storey RCC frame under construction" loading="lazy"><figcaption><small>Structure</small><h3>Multi-storey RCC frame</h3></figcaption></figure>
+      <figure class="proj reveal"><img src="images/work-slab-casting.jpg" alt="Concrete being cast on a building slab" loading="lazy"><figcaption><small>On site</small><h3>Slab concreting</h3></figcaption></figure>
     </div>
-    <p class="note">Placeholder tiles. Each will be replaced with a real project photo, name and location.</p>
   </div>
 </section>
 
@@ -366,13 +356,6 @@ footer.site .brand b{font-size:1.05rem}
   }, {threshold:.12});
   document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
 
-  document.getElementById('filters').addEventListener('click', function(e){
-    var b = e.target.closest('button'); if(!b) return;
-    this.querySelectorAll('button').forEach(function(x){ x.classList.toggle('on', x===b); });
-    document.querySelectorAll('#pgrid .proj').forEach(function(p){
-      p.style.display = (b.dataset.f==='all' || p.dataset.c===b.dataset.f) ? '' : 'none';
-    });
-  });
 
   document.getElementById('form').addEventListener('submit', function(e){
     e.preventDefault();
